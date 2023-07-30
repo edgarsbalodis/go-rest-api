@@ -33,7 +33,7 @@ func convertPostCommentRequestToComment(c PostCommentRequest) comment.Comment {
 type PostCommentRequest struct {
 	Slug   string `json:"slug" validate:"required"`
 	Author string `json:"author" validate:"required"`
-	Body   string `json:"body" validate:"required,number"`
+	Body   string `json:"body" validate:"required"`
 }
 
 func (h *Handler) PostComment(w http.ResponseWriter, r *http.Request) {
